@@ -4,6 +4,30 @@
 
 
 
+
+
+
+// Метод заполнения массива значениями, вводимыми через консоль
+
+string[] FillArray(string[] arr)
+{
+    Console.WriteLine();
+
+    Console.WriteLine("Введите символьные значения элементов массива:");
+
+    Console.WriteLine();
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"Введите значение {i + 1}-го элемента: ");
+
+        arr[i] = Console.ReadLine();
+    }
+    return arr;
+}
+
+
+
 //Метод печати массива
 
 void PrintArray(string[] array)

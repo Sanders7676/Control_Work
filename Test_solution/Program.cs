@@ -5,6 +5,47 @@
 
 
 
+// Метод формирования и заполнения массива элементами заданного размера
+
+string[] FillingArrayWithGivenElementSize(string[] arrayFirst, int limitingValue)
+{
+    // Находим какой будет длина искомого массива
+
+    int lengthOfSecondArray = 0;
+
+    string elementValue = string.Empty;
+
+    for (int i = 0; i < arrayFirst.Length; i++)
+    {
+        elementValue = arrayFirst[i];
+
+        if (elementValue.Length <= limitingValue)
+        {
+            lengthOfSecondArray++;
+        }
+    }
+
+    // Заполняем искомый массив элементами в соответствии с установленным ограничением
+
+    string[] arraySecond = new string[lengthOfSecondArray];
+
+    int iSecond = 0;
+
+    for (int i = 0; i < arrayFirst.Length; i++)
+    {
+        elementValue = arrayFirst[i];
+
+        if (elementValue.Length <= limitingValue)
+        {
+            arraySecond[iSecond] = arrayFirst[i];
+
+            iSecond++;
+        }
+    }
+    return arraySecond;
+}
+
+
 
 
 

@@ -47,6 +47,20 @@ string[] FillingArrayWithGivenElementSize(string[] arrayFirst, int limitingValue
 
 
 
+// Метод выдачи результатов работы программы
+
+void IssuanceOfResults(string[] desiredArray)
+{
+    if (desiredArray.Length == 0)
+    {
+        Console.WriteLine("В исходном массиве отсутствуют элементы, удовлетворяющие заданному ограничению.");
+    }
+    else
+    {
+        Console.WriteLine("Новый массив, состоящий из элементов, удовлетворяющих заданному ограничению, выглядит следующим образом:");
+        PrintArray(desiredArray);
+    }
+}
 
 
 

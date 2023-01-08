@@ -5,6 +5,38 @@
 
 
 
+Console.WriteLine();
+
+Console.Write("Ведите количество элементов в массиве: ");
+
+int lengthOfFirstArray = InputInt();
+
+string[] array = new string[lengthOfFirstArray];
+
+string[] arrayFirst = FillArray(array);
+
+Console.WriteLine();
+
+Console.WriteLine("Введенный массив выглядит следующим образом:");
+
+PrintArray(arrayFirst);
+
+Console.WriteLine();
+
+Console.Write("Ведите ограничивающее значение для количества символов элементов массива: ");
+
+int limitingValue = InputInt();
+
+string[] desiredArray = FillingArrayWithGivenElementSize(arrayFirst, limitingValue);
+
+Console.WriteLine();
+
+IssuanceOfResults(desiredArray);
+
+Console.WriteLine();
+
+
+
 // Метод формирования и заполнения массива элементами заданного размера
 
 string[] FillingArrayWithGivenElementSize(string[] arrayFirst, int limitingValue)

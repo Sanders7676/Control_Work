@@ -7,6 +7,27 @@
 
 
 
+
+
+// Метод для приема чисел, вводимых через консоль
+
+int InputInt()
+{
+    bool isNum = int.TryParse(Console.ReadLine(), out int num);
+
+    if (isNum)
+    {
+        return num;
+    }
+    else
+    {
+        Console.WriteLine("Введено некорректное значение.");
+        return -1;
+    }
+}
+
+
+
 // Метод заполнения массива значениями, вводимыми через консоль
 
 string[] FillArray(string[] arr)
